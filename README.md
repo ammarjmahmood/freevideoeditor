@@ -1,23 +1,23 @@
-# 🎬 Free Video Editor: No Signup, No Save
+# Free Video Editor: No Signup, No Save
 
-A lightning-fast, privacy-first video editor that runs **100% in your browser**. No accounts, no subscriptions, and your data **never** leaves your computer.
+A lightning-fast, privacy-first video editor that runs 100% in your browser. No accounts, no subscriptions, and your data never leaves your computer.
 
-### [🚀 Deploy Instantly on Vercel](#deployment)
-
----
-
-## ✨ Key Features
-
-- **🛡️ 100% Privacy:** All video processing (cropping, resizing, speed, overlays) happens in your browser's RAM via WebAssembly.
-- **🤖 Local AI Auto-Captions:** Generate subtitles automatically using OpenAI's Whisper (Tiny) model running locally via Transformers.js.
-- **🎨 Canva-Style Canvas:** Drag, drop, and resize multiple video and image layers on a spatial canvas.
-- **✂️ Multi-Track Timeline:** Split, cut, and move clips with a zoomable timeline for precision editing.
-- **⚡ Pro Speeds:** Speed up or slow down videos (0.5x to 4x) without quality loss.
-- **📦 Zero Data Retention:** Once you close the tab, all data is cleared. No signup, no tracking.
+### [Deploy Instantly on Vercel](#deployment)
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
+
+- **Privacy:** All video processing (cropping, resizing, speed, overlays) happens in your browser's RAM via WebAssembly.
+- **Local AI Auto-Captions:** Generate subtitles automatically using OpenAI's Whisper (Tiny) model running locally via Transformers.js.
+- **Canva-Style Canvas:** Drag, drop, and resize multiple video and image layers on a spatial canvas.
+- **Multi-Track Timeline:** Split, cut, and move clips with a zoomable timeline for precision editing.
+- **Pro Speeds:** Speed up or slow down videos (0.5x to 4x) without quality loss.
+- **Zero Data Retention:** Once you close the tab, all data is cleared. No signup, no tracking.
+
+---
+
+## Tech Stack
 
 - **React + Vite:** For a high-performance UI.
 - **FFmpeg.wasm:** The industry-standard video engine, compiled to WebAssembly.
@@ -26,7 +26,7 @@ A lightning-fast, privacy-first video editor that runs **100% in your browser**.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Local Development
 
@@ -51,7 +51,7 @@ A lightning-fast, privacy-first video editor that runs **100% in your browser**.
 
 ---
 
-## 🌍 Deployment
+## Deployment
 
 This project is optimized for **Vercel** and **Netlify**.
 
@@ -68,6 +68,6 @@ The included `vercel.json` handles this automatically for Vercel deployments.
 
 ---
 
-## 📜 License
+## License
 
 MIT License. Free to use, modify, and host.
