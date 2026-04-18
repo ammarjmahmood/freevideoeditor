@@ -326,15 +326,27 @@ function App() {
         </div>
 
         <div className="flex-1 overflow-x-auto relative bg-[#0f0f0f] timeline-scroll custom-scrollbar">
-           <div className="h-6 border-b border-white/5 relative bg-[#121212]" style={{ width: `${10 * timelineZoom * 10}px` }}>
-              {Array.from({ length: 100 }).map((_, i) => (
-                <div key={i} className="absolute border-l border-white/10 h-full text-[8px] text-gray-600 pl-1" style={{ left: `${i * timelineZoom}px` }}>
-                  {i}s
-                </div>
-              ))}
+           <div className="h-8 border-b border-white/5 relative bg-[#121212]" style={{ width: `${100 * timelineZoom}px` }}>
+              {Array.from({ length: 101 }).map((_, i) => {
+                const isMajor = i % 5 === 0;
+                const showLabel = timelineZoom > 40 || (timelineZoom > 10 && i % 5 === 0) || (i % 10 === 0);
+                return (
+                  <div 
+                    key={i} 
+                    className={`absolute border-l ${isMajor ? 'border-white/30 h-full' : 'border-white/10 h-1/2 bottom-0'} transition-opacity`} 
+                    style={{ left: `${i * timelineZoom}px` }}
+                  >
+                    {showLabel && (
+                      <span className="absolute left-1 top-1 text-[9px] text-gray-500 font-mono whitespace-nowrap">
+                        {i}s
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
            </div>
 
-           <div className="p-2 space-y-2 relative" style={{ width: `${10 * timelineZoom * 10}px` }}>
+           <div className="p-2 space-y-2 relative" style={{ width: `${100 * timelineZoom}px` }}>
               {layers.map((layer) => (
                 <div key={layer.id} className="h-10 relative flex items-center">
                    <div 
@@ -350,7 +362,7 @@ function App() {
                      onClick={() => setSelectedLayerId(layer.id)}
                    >
                      {layer.type === 'video' ? <Scissors size={10} className="mr-1" /> : <Layers size={10} className="mr-1" />}
-                     {layer.file?.name}
+                     <span className="truncate">{layer.file?.name}</span>
                    </div>
                 </div>
               ))}
